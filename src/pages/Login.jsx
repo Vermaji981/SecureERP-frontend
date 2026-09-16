@@ -41,7 +41,7 @@ const Login = () => {
           <div className="brand-logo">
             <ShieldCheck size={24} />
           </div>
-          <span style={{ fontSize: '24px', fontWeight: 800, color: '#0f172a' }}>SecureERP</span>
+          <span style={{ fontSize: '24px', fontWeight: 800, color: '#0f172a' }}>Zerp</span>
         </div>
 
         <h2 style={{ fontSize: '20px', fontWeight: 700, textAlign: 'center', marginBottom: '8px', color: '#1e293b' }}>

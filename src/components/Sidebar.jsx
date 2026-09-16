@@ -50,7 +50,7 @@ const Sidebar = () => {
           <ShieldCheck size={24} />
         </div>
         <div>
-          <div className="brand-title">SecureERP</div>
+          <div className="brand-title">Zerp</div>
           <div style={{ fontSize: '10px', color: '#94a3b8', letterSpacing: '0.5px' }}>ENTERPRISE SUITE</div>
         </div>
       </div>

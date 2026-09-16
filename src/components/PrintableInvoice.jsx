@@ -34,7 +34,7 @@ const PrintableInvoice = ({ invoice }) => {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#4f46e5' }}>
               <ShieldCheck size={28} />
-              <span style={{ fontSize: '24px', fontWeight: 800 }}>SecureERP Inc.</span>
+              <span style={{ fontSize: '24px', fontWeight: 800 }}>Zerp Inc.</span>
             </div>
             <p style={{ fontSize: '12px', color: '#64748b', marginTop: '4px' }}>
               100 Enterprise Tech Boulevard, Financial District<br />
@@ -139,7 +139,7 @@ const PrintableInvoice = ({ invoice }) => {
 
         {/* Invoice Footer */}
         <div style={{ marginTop: '40px', paddingTop: '20px', borderTop: '1px solid #e2e8f0', textAlign: 'center', fontSize: '12px', color: '#94a3b8' }}>
-          Thank you for doing business with SecureERP! Computer generated invoice, no signature required.
+          Thank you for doing business with Zerp! Computer generated invoice, no signature required.
         </div>
       </div>
     </div>

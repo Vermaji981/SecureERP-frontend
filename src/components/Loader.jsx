@@ -17,7 +17,7 @@ const Loader = ({ fullScreen = false }) => {
         }}
       >
         <div className="spinner" style={{ width: 40, height: 40, border: '4px solid rgba(255,255,255,0.1)', borderTopColor: '#6366f1', borderRadius: '50%', animation: 'spin 1s linear infinite' }}></div>
-        <p style={{ marginTop: 16, fontWeight: 600, fontSize: 14 }}>Loading SecureERP...</p>
+        <p style={{ marginTop: 16, fontWeight: 600, fontSize: 14 }}>Loading Zerp...</p>
         <style>{`@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }`}</style>
       </div>
     );

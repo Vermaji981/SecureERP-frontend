@@ -44,14 +44,14 @@ const Signup = () => {
           <div className="brand-logo">
             <ShieldCheck size={24} />
           </div>
-          <span style={{ fontSize: '24px', fontWeight: 800, color: '#0f172a' }}>SecureERP</span>
+          <span style={{ fontSize: '24px', fontWeight: 800, color: '#0f172a' }}>Zerp</span>
         </div>
 
         <h2 style={{ fontSize: '20px', fontWeight: 700, textAlign: 'center', marginBottom: '8px', color: '#1e293b' }}>
           Create your account
         </h2>
         <p style={{ fontSize: '13px', color: '#64748b', textAlign: 'center', marginBottom: '24px' }}>
-          Register new user profile for SecureERP.
+          Register new user profile for Zerp.
         </p>
 
         {error && (
