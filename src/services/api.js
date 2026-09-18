@@ -1,39 +1,41 @@
-import axios from 'axios';
-
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://secure-erp-244e.vercel.app/api';
+import axios from "axios";
 
 const api = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: `${import.meta.env.VITE_API_URL}/api`,
   headers: {
-    'Content-Type': 'application/json'
-  }
+    "Content-Type": "application/json",
+  },
 });
 
-// Request Interceptor: Attach JWT token if stored
+// Attach JWT token
 api.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem('secureerp_token');
+    const token = localStorage.getItem("secureerp_token");
+
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
+
     return config;
   },
   (error) => Promise.reject(error)
 );
 
-// Response Interceptor: Centralized error messaging
+// Centralized error handling
 api.interceptors.response.use(
   (response) => response.data,
   (error) => {
     const message =
-      error.response && error.response.data && error.response.data.message
-        ? error.response.data.message
-        : error.message || 'An unexpected error occurred';
+      error.response?.data?.message ||
+      error.message ||
+      "An unexpected error occurred";
 
-    if (error.response && (error.response.status === 401 || error.response.status === 403)) {
-      if (error.response.status === 401 && window.location.pathname !== '/login') {
-        localStorage.removeItem('secureerp_token');
-        localStorage.removeItem('secureerp_user');
+    if (error.response?.status === 401) {
+      localStorage.removeItem("secureerp_token");
+      localStorage.removeItem("secureerp_user");
+
+      if (window.location.pathname !== "/login") {
+        window.location.href = "/login";
       }
     }
 
